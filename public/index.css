@@ -1,0 +1,18 @@
+#main-body{
+	background-color: whitesmoke;
+	margin: 0 50px;
+}
+#title{
+	text-align: center;
+	font-family: verdana;
+}
+#snapshots{
+	text-align: center;
+}
+#video-player{
+	display: none;
+	margin:0 auto;
+}
+img{
+	cursor: pointer;
+}
