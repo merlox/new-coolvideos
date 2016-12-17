@@ -28,6 +28,44 @@ function copyFile(origin, end, fileName, callback){
 		}
 	}
 };
+//To generate a snapshot given the video name at the 1:35 time
+function generateSnapshot(file, cb){
+	var pathToFile = path.join(__dirname, '/uploads/videos/', file);
+	var snapshotFilename = file.replace(/(\.mp4)+/, '.jpg');
+    var pathToSnapshot = path.join(__dirname, '/uploads/snapshots/', snapshotFilename);
+
+    fs.stat(path.join(__dirname, '/uploads/snapshots/'), (err, stats) => {
+    	if(err) if(err.code == 'ENOENT') fs.mkdir(path.join(__dirname, '/uploads/snapshots/'), (err) => {
+    		if(err) console.log(err);
+    	});
+    });
+
+	var ffmpeg = cp.spawn('ffmpeg', ['-y', '-ss', '00:01:35', '-i', pathToFile, '-vframes', '1', pathToSnapshot]);
+
+	ffmpeg.on('error', (err) => {
+		console.log(`Something bad happened: ${err}`);
+	});
+	ffmpeg.on('exit', (exitCode) => {
+		if(exitCode == 0){
+			cb(null);
+		}else{
+			console.log('There was some error creating the snapshot, try again');
+			cb('There was some error creating the snapshot, try again');
+		}
+	});
+};
+//To generate the snapshots for all videos
+function generateAllSnapshots(){
+	var videosLocation = path.join(__dirname, 'uploads/videos');
+	fs.readdir(videosLocation, (err, videos) => {
+		if(err) console.log('Could not read videos folder: '+err);
+		videos.forEach((video) => {
+			generateSnapshot(video, (err) => {
+				if(err) console.log(err);
+			});
+		});
+	});
+};
 //To return the snapshots of all videos as an array callback not generate images
 function getAllSnapshots(cb){
 	if(cb == null){
@@ -88,8 +126,30 @@ function generateAllOnlineSnapshots(cb){
 		});
 	});
 };
+//To save the videos data to the db
+//function saveOnlineVideos(videosData, cb){
+//	//Separamos los videos y luego los creamos bien
+//	var videos = videosData.split('.webm');
+//	var error = "";
+//	videos.forEach((video, index) => {
+//		video += '.webm';
+//		db.collection('cool-videos').update({
+//			'video': video
+//		}, {
+//			'upsert': true
+//		}, (err, result) => {
+//			if(err) error = err; 
+//		});
+//		if(index + 1 >= videos.length){
+//			if(error) return cb(error);
+//			else return cb(null);
+//		}
+//	});
+//};
 module.exports = {
 	copyFile: copyFile,
+	generateSnapshot: generateSnapshot,
+	generateAllSnapshots: generateAllSnapshots,
 	getAllSnapshots: getAllSnapshots,
 	generateAllOnlineSnapshots: generateAllOnlineSnapshots,
 	getOnlineSnapshot: getOnlineSnapshot
