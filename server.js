@@ -1,8 +1,8 @@
-let express = require('express'),
+var express = require('express'),
 	bodyParser = require('body-parser'),
 	path = require('path'),
 	app = express(),
-	apiRoutes = require('./server/apiRoutes.js')
+	apiRoutes = require('./server/apiRoutes.js'),
 	functions = require('./server/functions.js');
 
 app.use(bodyParser.json());
@@ -24,12 +24,9 @@ app.get('/', (req, res) => {
 // 	functions.generateAllSnapshots();
 // });
 
-app.listen('8000', '0.0.0.0', () => {
+app.listen('8080', '0.0.0.0', () => {
 	console.log('Server started');
-	functions.connectDatabase((err) => {
+	functions.generateAllOnlineSnapshots((err) => {
 		if(err) console.log(err);
-		functions.generateAllOnlineSnapshots((err) => {
-			if(err) console.log(err);
-		});
 	});
 });
