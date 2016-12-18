@@ -3,7 +3,7 @@ var express = require('express'),
 	path = require('path'),
 	app = express(),
 	apiRoutes = require('./server/apiRoutes.js'),
-	port = (process.env.PORT || 8080),
+	port = (process.env.PORT || 9000),
 	functions = require('./server/functions.js');
 
 app.use(bodyParser.json());
