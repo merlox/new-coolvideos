@@ -5,7 +5,7 @@ function getServerImages(){
 	httpGet('/api/get-all-videos', (snapshots) => {
 		let images = JSON.parse(snapshots);
 		images.forEach((image, index) => {
-			q('#snapshots').insertAdjacentHTML('beforeend', 
+			q('#snapshots').insertAdjacentHTML('afterbegin', 
 				'<img src="public-uploads/'+image+'" width="300px" height="200px">');
 			if(index + 1 == images.length){
 				addListeners();
@@ -26,7 +26,7 @@ function addListeners(){
 };
 //Funcion para copiar el video a public uploads
 function loadVideo(videoName){
-	q('#video-player').style.display = 'block';
+	q('#contenedor-video-ads').style.display = 'flex';
 	if(q('#video-player source')) q('#video-player source').remove();
 	q('#video-player').insertAdjacentHTML('beforeend', 
 		'<source src="http://merunas.com/wp-content/uploads/videos/'+videoName+'" type="video/mp4">');
