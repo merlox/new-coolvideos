@@ -20,4 +20,7 @@ img{
 	#video-player{
 		width: 100%;
 	}
+	#main-body{
+		margin: 0 0;
+	}
 }
