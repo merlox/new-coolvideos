@@ -146,7 +146,7 @@ function generateAllOnlineSnapshots(cb){
 function getVideo(videoName, cb){
     console.log('GetVideo');
     let videoPathAndName = path.join(__dirname, 'uploads/videos', videoName);
-    let end = path.join(__dirname, '../public/public-uploads');
+    let end = path.join(__dirname, '../public/public-uploads/');
     console.log(`Origin: ${videoPathAndName}`);
     console.log(`End: ${end}`);
     console.log(`Filename: ${videoName}`);
