@@ -74,7 +74,24 @@ function generateSnapshot(videoName, cb){
                 return cb(null);
         }
 };
-
+//To generate the snapshots only
+function generateAllSnapshots(cb){
+        if(cb == null) cb = () => {};
+        var videosLocation = path.join(__dirname, 'uploads/videos');
+        fs.readdir(videosLocation, (err, videos) => {
+            if(err) return cb(err);
+            let counter = 0;
+            videos.forEach(video => {
+                generateSnapshot(video, (err) => {
+                        if(err) console.log(err);
+                        counter++;
+                        if(counter >= videos.length){
+                        	return cb(null);
+                        }
+                });
+            });
+        });
+};
 function deleteExistingSnapshots(cb){
         fs.readdir(path.join(__dirname, 'uploads/snapshots'), (err, files) => {
                 if(err) return console.log(err);
