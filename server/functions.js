@@ -99,19 +99,22 @@ function generateAllSnapshots(cb){
 };
 function deleteExistingSnapshots(cb){
     console.log('deleteExistingSnapshots');
-        fs.readdir(path.join(__dirname, 'uploads/snapshots'), (err, files) => {
-                if(err) return console.log(err);
-                var counter = 0;
-                files.forEach(file => {
-                        fs.unlink(path.join(__dirname, 'upload/snapshots', file), (err) => {
-                                if(err) console.log(err);
-                                counter++;
-                                if(counter >= files.length){
-                                        return cb(null);
-                                }
-                        });
-                });
-        });
+    fs.readdir(path.join(__dirname, 'uploads/snapshots'), (err, files) => {
+            if(err) return console.log(err);
+            if(files == [] || files === null || files === undefined || files.length == 0){
+                return cb('No files found in snapshots');
+            }
+            var counter = 0;
+            files.forEach(file => {
+                    fs.unlink(path.join(__dirname, 'upload/snapshots', file), (err) => {
+                            if(err) console.log(err);
+                            counter++;
+                            if(counter >= files.length){
+                                    return cb(null);
+                            }
+                    });
+            });
+    });
 };
 //To generate all the online videos snapshots
 function generateAllOnlineSnapshots(cb){
