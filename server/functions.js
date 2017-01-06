@@ -82,7 +82,7 @@ function generateAllSnapshots(cb){
             if(err) return cb(err);
             let counter = 0;
             videos.forEach(video => {
-                generateSnapshot(video, (err) => {
+                generateSnapshot(path.join(videosLocation, video), (err) => {
                         if(err) console.log(err);
                         counter++;
                         if(counter >= videos.length){
