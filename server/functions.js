@@ -67,10 +67,11 @@ function getOnlineSnapshot(url, cb){
 //Generate snapshot image
 function generateSnapshot(videoName, cb){
         var snapshotName = videoName.replace(/(\.mp4)+/, '.jpg');
+        var videoPathAndName = path.join(__dirname, '/uploads/videos', videoName);
         var snapshotPathAndName = path.join(__dirname, '/uploads/snapshots', snapshotName);
         console.log(videoName);
         console.log(snapshotPathAndName);
-        cp.exec(`ffmpeg -y -ss 00:01:35 -i ${videoName} -vframes 1 ${snapshotPathAndName}`, (err, stdout, stderr) => {
+        cp.exec(`ffmpeg -y -ss 00:01:35 -i ${videoPathAndName} -vframes 1 ${snapshotPathAndName}`, (err, stdout, stderr) => {
                 console.log('done');
                 if(err) return cb('Could not generate snapshot');
                 return cb(null);
@@ -84,7 +85,7 @@ function generateAllSnapshots(cb){
             if(err) return cb(err);
             let counter = 0;
             videos.forEach(video => {
-                generateSnapshot(path.join(videosLocation, video), (err) => {
+                generateSnapshot(video, (err) => {
                         if(err) console.log('Could not generate snapshot.');
                         counter++;
                         if(counter >= videos.length){
