@@ -30,6 +30,7 @@ function copyFile(origin, end, fileName, callback){
 };
 //To return the snapshots of all videos as an array callback not generate images
 function getAllSnapshots(cb){
+    console.log('getAllSnapshots');
         if(cb == null){
                 cb = () => {};
         }
@@ -51,6 +52,7 @@ function getAllSnapshots(cb){
 };
 //To generate snapshots of online videos
 function getOnlineSnapshot(url, cb){
+    console.log('getOnlineSnapshot');
 	var videoName = url;
 	var snapshotName = videoName.substring(45).replace(/(\.mp4)+/, '.jpg');
 	var snapshotPathAndName = path.join(__dirname, '/uploads/snapshots/', snapshotName);
@@ -66,6 +68,7 @@ function getOnlineSnapshot(url, cb){
 
 //Generate snapshot image
 function generateSnapshot(videoName, cb){
+    console.log('generateSnapshot');
         var snapshotName = videoName.replace(/(\.mp4)+/, '.jpg');
         var videoPathAndName = path.join(__dirname, '/uploads/videos', videoName);
         var snapshotPathAndName = path.join(__dirname, '/uploads/snapshots', snapshotName);
@@ -77,6 +80,7 @@ function generateSnapshot(videoName, cb){
 };
 //To generate the snapshots only
 function generateAllSnapshots(cb){
+    console.log('generateAllSnapshots');
         if(cb == null) cb = () => {};
         var videosLocation = path.join(__dirname, 'uploads/videos');
         fs.readdir(videosLocation, (err, videos) => {
@@ -94,6 +98,7 @@ function generateAllSnapshots(cb){
         });
 };
 function deleteExistingSnapshots(cb){
+    console.log('deleteExistingSnapshots');
         fs.readdir(path.join(__dirname, 'uploads/snapshots'), (err, files) => {
                 if(err) return console.log(err);
                 var counter = 0;
@@ -110,6 +115,7 @@ function deleteExistingSnapshots(cb){
 };
 //To generate all the online videos snapshots
 function generateAllOnlineSnapshots(cb){
+    console.log('generateAllOnlineSnapshots');
         var error = "";
         fs.readFile(path.join(__dirname, 'videonames.txt'), (err, data) => {
                 if(err) return cb(err);
@@ -135,6 +141,7 @@ function generateAllOnlineSnapshots(cb){
 };
 //Para copiar un video y retornar nada
 function getVideo(videoName, cb){
+    console.log('GetVideo');
     let videoPathAndName = path.join(__dirname, 'uploads/videos', videoName);
     let end = path.join(__dirname, '../public/public-uploads');
     copyFile(videoPathAndName, end, videoName, (err) => {
