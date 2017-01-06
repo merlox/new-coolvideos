@@ -28,10 +28,8 @@ function addListeners(){
 function loadVideo(videoName){
 	q('#contenedor-video-ads').style.display = 'flex';
 	httpGet(`/api/video/${videoName}`, err => {
-		if(err) q('#contenedor-video-ads').innerHTML = `<b>${err}</b>`;
-		if(q('#video-player source')) q('#video-player source').remove();
-		q('#video-player').insertAdjacentHTML('beforeend', 
-			`<source src="http://thetoptenweb.com/public-uploads/${videoName}" type="video/mp4">`);
+		if(err) q('#errors').innerHTML = `<b style="color:red;">${err}</b>`;
+		q('#video-source').src = `http://thetoptenweb.com/public-uploads/${videoName}`;
 		q('#video-player').load();
 		window.scrollTo(0, 0);
 	});
