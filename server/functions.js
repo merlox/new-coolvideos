@@ -72,7 +72,7 @@ function generateSnapshot(videoName, cb){
                 console.log('done');
                 if(err) return cb(err);
                 return cb(null);
-        }
+        });
 };
 
 function deleteExistingSnapshots(cb){
