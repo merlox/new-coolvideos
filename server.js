@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
         console.log('Server started');
         functions.deleteExistingSnapshots(err => {
+            if(err) console.log(err);
+            functions.generateAllSnapshots((err) => {
                 if(err) console.log(err);
-        });
-        functions.generateAllSnapshots((err) => {
-                if(err) console.log(err);
+        	});
         });
 });
