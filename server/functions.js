@@ -68,6 +68,7 @@ function getOnlineSnapshot(url, cb){
 function generateSnapshot(videoName, cb){
         var snapshotName = videoName.replace(/(\.mp4)+/, '.jpg');
         var snapshotPathAndName = path.join(__dirname, '/uploads/snapshots', snapshotName);
+        console.log(videoName);
         cp.exec(`ffmpeg -y -ss 00:01:35 -i ${videoName} -vframes 1 ${snapshotPathAndName}`, (err, stdout, stderr) => {
                 console.log('done');
                 if(err) return cb('Could not generate snapshot');
