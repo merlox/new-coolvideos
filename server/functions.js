@@ -147,6 +147,9 @@ function getVideo(videoName, cb){
     console.log('GetVideo');
     let videoPathAndName = path.join(__dirname, 'uploads/videos', videoName);
     let end = path.join(__dirname, '../public/public-uploads');
+    console.log(`Origin: ${videoPathAndName}`);
+    console.log(`End: ${end}`);
+    console.log(`Filename: ${videoName}`);
     copyFile(videoPathAndName, end, videoName, (err) => {
         if(err) return cb('Could not send the video, please try again.');
         return cb(null);
