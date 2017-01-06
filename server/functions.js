@@ -133,11 +133,22 @@ function generateAllOnlineSnapshots(cb){
                 });
         });
 };
+//Para copiar un video y retornar nada
+function getVideo(videoName, cb){
+    let videoPathAndName = path.join(__dirname, 'uploads/videos', videoName);
+    let end = path.join(__dirname, '../public/public-uploads');
+    copyFile(videoPathAndName, end, videoName, (err) => {
+        if(err) return cb('Could not send the video, please try again.');
+        return cb(null);
+    });
+};
+
 module.exports = {
         copyFile: copyFile,
         getAllSnapshots: getAllSnapshots,
         generateAllOnlineSnapshots: generateAllOnlineSnapshots,
         getOnlineSnapshot: getOnlineSnapshot,
         deleteExistingSnapshots: deleteExistingSnapshots,
-        generateAllSnapshots: generateAllSnapshots
+        generateAllSnapshots: generateAllSnapshots,
+        getVideo: getVideo
 };
