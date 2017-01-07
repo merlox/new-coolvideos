@@ -1814,3 +1814,83 @@ Error: Can't set headers after they are sent.
     at Array.forEach (native)
     at fs.readdir (/home/new-coolvideos/server/functions.js:40:24)
     at FSReqWrap.oncomplete (fs.js:111:15)
+Server started
+deleteExistingSnapshots
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1789272.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1789272.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1882209.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1882209.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/3155763.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/3155763.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4029942.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4029942.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4500219.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4500219.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5305997.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5305997.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5634978.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5634978.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/6023023.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/6023023.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/8999949.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/8999949.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9615143.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9615143.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9740925.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9740925.jpg' }
+generateAllSnapshots
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done

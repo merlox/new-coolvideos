@@ -31,9 +31,14 @@ app.use('*', (req, res, next) => {
 
 app.use('/api', apiRoutes);
 
+/*
+
+PUBLIC ROUTES HERE
+
+*/
 app.get('/', (req, res) => {
 	if(req.protocol === 'https'){
-		res.sendFile(path.join(__dirname, '/public/index.html'));
+		res.sendFile(path.join(__dirname, '/public/start.html'));
 	}else{
 		return res.redirect(`https://thetoptenweb.com/`);
 	}
