@@ -5,6 +5,7 @@ var express = require('express'),
 	apiRoutes = require('./server/apiRoutes.js'),
 	port = (process.env.PORT || 9000),
 	functions = require('./server/functions.js'),
+	fs = require('fs'),
 	http = require('http'),
 	https = require('https');
 
@@ -32,7 +33,7 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-http.createServer(app).listen(port);
+http.createServer(app).listen(80);
 https.createServer(options, app).listen(443);
 
 console.log('Server started');
