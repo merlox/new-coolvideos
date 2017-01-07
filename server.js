@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('*', (req, res, next) => {
 	//Redirect to https all
 	if(req.protocol === 'http'){
-		res.redirect(`https://thetoptenweb.com${req.originalUrl}`);
+		return res.redirect(`https://thetoptenweb.com${req.originalUrl}`);
 	}
 	console.log(`Req: ${req.originalUrl} from ${req.ip}`);
 	next();
