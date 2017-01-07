@@ -18,10 +18,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-	console.log('HIIIIIIII');
-});
-
 app.use('*', (req, res, next) => {
 	//Redirect to https all
 	console.log(`Req: ${req.originalUrl} from ${req.ip}`);
@@ -36,7 +32,11 @@ app.use('*', (req, res, next) => {
 app.use('/api', apiRoutes);
 
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, '/public/index.html'));
+	if(req.protocol === 'https'){
+		res.sendFile(path.join(__dirname, '/public/index.html'));
+	}else{
+		return res.redirect(`https://thetoptenweb.com/`);
+	}
 });
 
 http.createServer(app).listen(port);
