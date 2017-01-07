@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-http.createServer(app).listen(80);
+http.createServer(app).listen(port);
 https.createServer(options, app).listen(443);
 
 console.log('Server started');
