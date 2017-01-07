@@ -21,12 +21,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('*', (req, res, next) => {
 	//Redirect to https all
 	console.log(req.protocol);
+	console.log(req.protocol === 'http');
+	console.log(`Req: ${req.originalUrl} from ${req.ip}`);
 	if(req.protocol === 'http'){
 		console.log(`Redirecting to: https://thetoptenweb.com${req.originalUrl}`);
 		return res.redirect(`https://thetoptenweb.com${req.originalUrl}`);
+	}else if(req.protocol === 'https'){
+		next();
 	}
-	console.log(`Req: ${req.originalUrl} from ${req.ip}`);
-	next();
 });
 
 app.use('/api', apiRoutes);
