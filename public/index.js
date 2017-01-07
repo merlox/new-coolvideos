@@ -29,7 +29,7 @@ function loadVideo(videoName){
 	q('#contenedor-video-ads').style.display = 'flex';
 	httpGet(`/api/video/${videoName}`, err => {
 		if(err) q('#errors').innerHTML = `<b style="color:red;">${err}</b>`;
-		q('#video-source').src = `http://thetoptenweb.com/public-uploads/${videoName}`;
+		q('#video-source').src = `//thetoptenweb.com/public-uploads/${videoName}`;
 		q('#video-player').load();
 		window.scrollTo(0, 0);
 	});

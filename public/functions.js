@@ -5,6 +5,7 @@ function httpGet(url, cb){
 	}
 	let request = new XMLHttpRequest();
 	request.open('GET', url);
+	request.setRequestHeader('Access-Control-Allow-Origin', '*');
 	request.onreadystatechange = () => {
       if(request.readyState == XMLHttpRequest.DONE && request.status >= 200 && request.status <= 300){
 		return cb(request.responseText);      
@@ -24,6 +25,7 @@ function httpPost(url, data, cb){
 	let request = new XMLHttpRequest();
 	request.open('POST', url);
 	request.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+	request.setRequestHeader('Access-Control-Allow-Origin', '*');
 	request.onreadystatechange = () => {
       if(request.readyState == XMLHttpRequest.DONE && request.status >= 200 && request.status <= 300){
 		return cb(request.responseText);      
