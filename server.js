@@ -4,7 +4,14 @@ var express = require('express'),
 	app = express(),
 	apiRoutes = require('./server/apiRoutes.js'),
 	port = (process.env.PORT || 9000),
-	functions = require('./server/functions.js');
+	functions = require('./server/functions.js'),
+	http = require('http'),
+	https = require('https');
+
+var options = {
+	key: fs.readFileSync('/etc/letsencrypt/live/thetoptenweb.com/privkey.pem'),
+	cert: fs.readFileSync('/etc/letsencrypt/live/thetoptenweb.com/cert.pem')
+};
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -21,12 +28,13 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-app.listen(port, () => {
-        console.log('Server started');
-        functions.deleteExistingSnapshots(err => {
-            if(err) console.log(err);
-            functions.generateAllSnapshots((err) => {
-                if(err) console.log(err);
-        	});
-        });
+http.createServer(app).listen(port);
+https.createServer(options, app).listen(443);
+
+console.log('Server started');
+functions.deleteExistingSnapshots(err => {
+    if(err) console.log(err);
+    functions.generateAllSnapshots((err) => {
+        if(err) console.log(err);
+	});
 });
