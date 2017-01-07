@@ -18,11 +18,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+	console.log('HIIIIIIII');
+});
+
 app.use('*', (req, res, next) => {
 	//Redirect to https all
 	console.log(`Req: ${req.originalUrl} from ${req.ip}`);
-	console.log(req.url);
-	console.log(req.originalUrl);
 	if(req.protocol === 'http'){
 		console.log(`Redirecting to: https://thetoptenweb.com${req.originalUrl}`);
 		return res.redirect(`https://thetoptenweb.com${req.originalUrl}`);
