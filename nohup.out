@@ -1706,3 +1706,111 @@ CopyFile, functions.js
 CopyFile, functions.js
 CopyFile, functions.js
 Req: /images/agario.png from ::ffff:177.244.214.124
+Server started
+deleteExistingSnapshots
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1789272.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1789272.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1882209.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1882209.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/3155763.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/3155763.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4029942.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4029942.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4500219.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4500219.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5305997.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5305997.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5634978.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5634978.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/6023023.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/6023023.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/8999949.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/8999949.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9615143.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9615143.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9740925.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9740925.jpg' }
+generateAllSnapshots
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+Req: /api/get-all-videos from ::ffff:92.185.107.94
+getAllSnapshots
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+CopyFile, functions.js
+_http_outgoing.js:359
+    throw new Error('Can\'t set headers after they are sent.');
+    ^
+
+Error: Can't set headers after they are sent.
+    at ServerResponse.setHeader (_http_outgoing.js:359:11)
+    at ServerResponse.header (/home/new-coolvideos/node_modules/express/lib/response.js:719:10)
+    at ServerResponse.send (/home/new-coolvideos/node_modules/express/lib/response.js:164:12)
+    at ServerResponse.json (/home/new-coolvideos/node_modules/express/lib/response.js:250:15)
+    at ServerResponse.send (/home/new-coolvideos/node_modules/express/lib/response.js:152:21)
+    at functions.getAllSnapshots (/home/new-coolvideos/server/apiRoutes.js:8:7)
+    at images.forEach (/home/new-coolvideos/server/functions.js:48:40)
+    at Array.forEach (native)
+    at fs.readdir (/home/new-coolvideos/server/functions.js:40:24)
+    at FSReqWrap.oncomplete (fs.js:111:15)
