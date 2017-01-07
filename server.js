@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('*', (req, res, next) => {
 	//Redirect to https all
+	console.log(req.protocol);
 	if(req.protocol === 'http'){
 		return res.redirect(`https://thetoptenweb.com${req.originalUrl}`);
 	}
@@ -33,7 +34,6 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-http.createServer(app).listen(80);
 https.createServer(options, app).listen(443);
 
 console.log('Server started');
