@@ -4133,3 +4133,321 @@ CopyFile, functions.js
 CopyFile, functions.js
 CopyFile, functions.js
 Req: /favicon.ico from ::ffff:92.185.107.94
+Server started
+deleteExistingSnapshots
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1040668.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1040668.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1789272.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1789272.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1882209.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1882209.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/3155763.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/3155763.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/3696626.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/3696626.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4029942.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4029942.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4460947.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4460947.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4500219.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4500219.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5227115.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5227115.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5305997.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5305997.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5433904.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5433904.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5634978.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5634978.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5778412.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5778412.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/6023023.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/6023023.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/6693998.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/6693998.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/7628669.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/7628669.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/7687432.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/7687432.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/8399045.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/8399045.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/8999949.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/8999949.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9142831.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9142831.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9615143.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9615143.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9740925.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9740925.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9897135.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9897135.jpg' }
+generateAllSnapshots
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+done
+done
+done
+done
+done
+Req: / from ::ffff:92.185.107.94
+done
+Req: / from ::ffff:92.185.107.94
+Req: /favicon.ico from ::ffff:92.185.107.94
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+done
+Req: / from ::ffff:92.185.107.94
+Req: / from ::ffff:92.185.107.94
+Req: /favicon.ico from ::ffff:92.185.107.94
+Req: / from ::ffff:92.185.107.94
+Server started
+deleteExistingSnapshots
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1040668.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1040668.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1789272.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1789272.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/1882209.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/1882209.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/3155763.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/3155763.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/3696626.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/3696626.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4029942.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4029942.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4460947.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4460947.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/4500219.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/4500219.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5227115.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5227115.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5305997.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5305997.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5433904.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5433904.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5634978.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5634978.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/5778412.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/5778412.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/6023023.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/6023023.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/6693998.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/6693998.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/7628669.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/7628669.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/7687432.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/7687432.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/8399045.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/8399045.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/8999949.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/8999949.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9142831.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9142831.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9615143.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9615143.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9740925.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9740925.jpg' }
+{ Error: ENOENT: no such file or directory, unlink '/home/new-coolvideos/server/upload/snapshots/9897135.jpg'
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'unlink',
+  path: '/home/new-coolvideos/server/upload/snapshots/9897135.jpg' }
+generateAllSnapshots
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+generateSnapshot
+Req: / from ::ffff:92.185.107.94
+done
+done
+done
+done
+done

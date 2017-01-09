@@ -29,7 +29,7 @@ PUBLIC ROUTES HERE
 
 */
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname, '/public/start.html');
+	res.sendFile(path.join(__dirname, '/public/start.html'));
 });
 
 app.listen(port, (req, res) => {
