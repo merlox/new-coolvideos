@@ -1,28 +1,41 @@
-var express = require('express'),
-	bodyParser = require('body-parser'),
-	path = require('path'),
-	app = express(),
-	apiRoutes = require('./server/apiRoutes.js'),
-	port = (process.env.PORT || 9000),
-	functions = require('./server/functions.js');
+const express = require('express')
+const bodyParser = require('body-parser')
+const { join } = require('path')
+const app = express()
+const apiRoutes = require('./server/apiRoutes.js')
+const port = process.env.PORT || 9000
+const functions = require('./server/functions.js')
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(join(__dirname, 'public')))
 
 app.use('*', (req, res, next) => {
-	console.log(`Req: ${req.originalUrl} from ${req.ip}`);
-	next();
-});
+	// Logger
+	let time = new Date()
+	console.log(
+		`${req.method} to ${
+			req.originalUrl
+		} at ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+	)
+	next()
+})
 
-app.use('/api', apiRoutes);
+app.use('/api', apiRoutes)
 
-app.listen(port, (req, res) => {
-	console.log('Server started');
-	functions.deleteExistingSnapshots(err => {
-	    if(err) console.log(err);
-	    functions.generateAllSnapshots((err) => {
-	        if(err) console.log(err);
-	    });
-	});
-});
+app.listen(port, '0.0.0.0', async () => {
+	console.log(`> Server started on localhost:${port}`)
+	try {
+		await functions.deleteExistingSnapshots()
+	} catch (e) {
+		console.log('Error deleting snapshots:', e)
+		process.exit(1)
+	}
+
+	try {
+		await functions.generateAllSnapshots()
+	} catch (e) {
+		console.log('Error generating snapshots:', e)
+		process.exit(1)
+	}
+})

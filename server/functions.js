@@ -4,7 +4,7 @@ const { join } = require('path')
 
 // Origin es el archivo con path y end es solo directorio sin nombre de archivo
 function copyFile(origin, end, fileName) {
-	console.log('CopyFile, functions.js')
+	console.log('copyFile')
 	return new Promise((resolve, reject) => {
 		const finalName = join(end, fileName)
 		const readStream = fs.createReadStream(origin)
@@ -30,7 +30,7 @@ function getAllSnapshots() {
 	return new Promise((resolve, reject) => {
 		fs.readdir(snapshotsLocation, (err, images) => {
 			if (err) return reject(err)
-			images.forEach((image, index) => {
+			images.forEach(async (image, index) => {
 				snapshots.push(image)
 				const origin = join(__dirname, '/uploads/snapshots/', image)
 				const end = join(__dirname, '../public/public-uploads/')

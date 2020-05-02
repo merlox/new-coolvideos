@@ -1,42 +1,42 @@
-iframe{
+iframe {
 	text-align: center;
 	margin: 0 auto;
 	display: block;
 }
-img{
+img {
 	cursor: pointer;
 }
-#main-body{
+#main-body {
 	background-color: whitesmoke;
 	margin: 0 50px;
 }
-#title{
+#title {
 	text-align: center;
 	font-family: verdana;
 }
-.contenedor-ads{
+.contenedor-ads {
 	width: 310px;
 }
-#contenedor-video-ads{
+#contenedor-video-ads {
 	display: none;
 	justify-content: center;
 	flex-direction: row;
 }
-#snapshots{
+#snapshots {
 	text-align: center;
 }
-#video-player{
-	margin:0 auto;
+#video-player {
+	margin: 0 auto;
 	height: 100%;
 }
-@media (max-width: 1050px){
-	#contenedor-video-ads{
+@media (max-width: 1050px) {
+	#contenedor-video-ads {
 		flex-direction: column;
 	}
-	#video-player{
+	#video-player {
 		width: 100%;
 	}
-	#main-body{
+	#main-body {
 		margin: 0 0;
 	}
 }
