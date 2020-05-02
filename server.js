@@ -2,7 +2,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const { join } = require('path')
 const app = express()
-const apiRoutes = require('./server/apiRoutes.js')
 const port = process.env.PORT || 8000
 const Storage = require('node-storage')
 const functions = require('./server/functions.js')
@@ -24,7 +23,6 @@ app.use('*', (req, res, next) => {
 	next()
 })
 
-app.use('/api', apiRoutes)
 app.get('/', (req, res) => {
 	res.render(join(__dirname, 'server/views/index'), {
 		snapshots: store.get('snapshots'),
