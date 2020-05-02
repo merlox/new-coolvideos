@@ -25,10 +25,29 @@ img {
 #snapshots {
 	text-align: center;
 }
+
 #video-player {
+	display: none;
 	margin: 0 auto;
 	height: 100%;
+	width: 900px;
 }
+
+#snapshots {
+	list-style-type: none;
+	display: grid;
+	grid-auto-flow: row;
+	padding-left: 0;
+	grid-template-columns: 1fr 1fr 1fr;
+	max-width: 1000px;
+	margin: 50px auto;
+	grid-gap: 10px;
+}
+
+.snapshot {
+	width: 100%;
+}
+
 @media (max-width: 1050px) {
 	#contenedor-video-ads {
 		flex-direction: column;

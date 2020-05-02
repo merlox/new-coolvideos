@@ -8,7 +8,7 @@ const videosLocation = join(__dirname, '../public/videos')
 // Generate snapshot image
 function generateSnapshot(videoName) {
 	console.log('generateSnapshot')
-	const snapshotName = videoName.replace(/(\.mp4)+/, '.jpg')
+	const snapshotName = videoName.replace('.mp4', '.jpg')
 	const videoPathAndName = join(videosLocation, videoName)
 	const snapshotPathAndName = join(snapshotsLocation, snapshotName)
 	return new Promise((resolve, reject) => {

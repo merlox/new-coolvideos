@@ -18,7 +18,6 @@
         ga('send', 'pageview');
 	</script>
     <!--GA end-->
-	<script type="text/javascript" src="index.js"></script>
 </head>
 <body>
 	<h1 id="title">The Top Ten Web</h1>
@@ -34,17 +33,24 @@
 				<script>(adsbyjuicy = 
 				window.adsbyjuicy || []).push({'adzone':555365});</script>
 			</div> -->
-			<video id="video-player" width="700px" controls>
+			<video id="video-player" controls controlsList="nodownload">
 				<source id="video-source" src="" type="video/mp4">;
 			</video>
 		</div>
 		<ul id="snapshots">
-            <% snapshots.forEach(snapshot => { %>
+            <% snapshots.forEach((snapshot, i) => { %>
                 <li>
-                    <img src="<%= snapshot %>" alt="<%= snapshot %>">
+					<img 
+						src="snapshots/<%= snapshot %>"
+						alt="<%= snapshot %>"
+						title="<%= snapshot %>"
+						class="snapshot"
+					/>
                 </li>
             <% }); %>
 		</ul>
 	</div>
+
+	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>

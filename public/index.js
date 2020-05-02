@@ -1,48 +1,19 @@
-window.addEventListener('load', getServerImages)
+const videosFolder = 'videos/'
 
-function q(selector) {
-	return document.querySelector(selector)
-}
+addListeners()
 
-function qAll(selector) {
-	return document.querySelectorAll(selector)
-}
-
-//Para conseguir las snapshots de cada video
-function getServerImages() {
-	httpGet('/api/get-all-videos', (snapshots) => {
-		let images = JSON.parse(snapshots)
-		images.forEach((image, index) => {
-			q('#snapshots').insertAdjacentHTML(
-				'afterbegin',
-				'<img src="public-uploads/' + image + '" width="300px" height="200px">'
-			)
-			if (index + 1 == images.length) {
-				addListeners()
-			}
-		})
-	})
-}
 //Funcion para crear los listeners de cada imagen
 function addListeners() {
-	if (q('img')) {
-		qAll('img').forEach((image) => {
+	if (document.querySelector('img')) {
+		document.querySelectorAll('img').forEach((image) => {
 			image.addEventListener('click', (e) => {
-				let videoName = e.target.src
-					.split('public-uploads/')[1]
-					.replace(/(\.jpg)+/, '.mp4')
-				loadVideo(videoName)
+				let videoName = e.target.getAttribute('alt').replace('.jpg', '.mp4')
+				document.querySelector('#video-source').src = videosFolder + videoName
+				document.querySelector('#video-player').load()
+				document.querySelector('#video-player').play()
+				document.querySelector('#video-player').style.display = 'flex'
+				window.scrollTo(0, 0)
 			})
 		})
 	}
-}
-//Funcion para copiar el video a public uploads
-function loadVideo(videoName) {
-	q('#contenedor-video-ads').style.display = 'flex'
-	httpGet(`/api/video/${videoName}`, (err) => {
-		if (err) q('#errors').innerHTML = `<b style="color:red;">${err}</b>`
-		q('#video-source').src = `//thetoptenweb.com/public-uploads/${videoName}`
-		q('#video-player').load()
-		window.scrollTo(0, 0)
-	})
 }
