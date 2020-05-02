@@ -31,17 +31,17 @@ app.get('/', (req, res) => {
 
 app.listen(port, '0.0.0.0', async () => {
 	console.log(`> Server started on localhost:${port}`)
-	// try {
-	// 	await functions.deleteExistingSnapshots()
-	// } catch (e) {
-	// 	console.log('Error deleting snapshots:', e)
-	// 	process.exit(1)
-	// }
+	try {
+		await functions.deleteExistingSnapshots()
+	} catch (e) {
+		console.log('Error deleting snapshots:', e)
+		process.exit(1)
+	}
 
-	// try {
-	// 	await functions.generateAllSnapshots()
-	// } catch (e) {
-	// 	console.log('Error generating snapshots:', e)
-	// 	process.exit(1)
-	// }
+	try {
+		await functions.generateAllSnapshots()
+	} catch (e) {
+		console.log('Error generating snapshots:', e)
+		process.exit(1)
+	}
 })

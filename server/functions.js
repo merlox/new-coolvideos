@@ -1,7 +1,7 @@
 const fs = require('fs')
 const cp = require('child_process')
 const { join } = require('path')
-const snapshotsLocation = join(__dirname, 'public/snapshots')
+const snapshotsLocation = join(__dirname, '../public/snapshots')
 const videosLocation = join(__dirname, '../public/videos')
 const videoNamesLocation = join(__dirname, 'videonames.txt')
 
@@ -74,10 +74,9 @@ function generateSnapshot(videoName) {
 	const snapshotPathAndName = join(snapshotsLocation, snapshotName)
 	return new Promise((resolve, reject) => {
 		cp.exec(
-			`ffmpeg -y -ss 00:01:35 -i ${videoPathAndName} -vFrames 1 ${snapshotPathAndName}`,
+			`ffmpeg -y -ss 00:01:35 -i "${videoPathAndName}" -vframes 1 "${snapshotPathAndName}"`,
 			(err, stdout, stderr) => {
 				if (err) return reject(err)
-				if (stderr) return reject(err)
 				resolve(stdout)
 			}
 		)
@@ -90,14 +89,14 @@ function generateAllSnapshots() {
 	return new Promise((resolve, reject) => {
 		fs.readdir(videosLocation, (err, videos) => {
 			if (err) return reject(err)
-			videos.map(async (video) => {
+			videos.map(async video => {
 				try {
 					await generateSnapshot(video)
+					return resolve()
 				} catch (e) {
 					return reject(e)
 				}
 			})
-			return resolve()
 		})
 	})
 }
@@ -105,22 +104,18 @@ function generateAllSnapshots() {
 // To delete existing snaptshots
 function deleteExistingSnapshots() {
 	console.log('deleteExistingSnapshots')
-	let counter = 0
 	return new Promise((resolve, reject) => {
 		fs.readdir(snapshotsLocation, (err, files) => {
 			if (err) return reject(err)
 			if (!files || files === [] || files.length === 0) {
-				return reject('No files found in snapshots')
+				return resolve('No files found in snapshots')
 			}
 			files.map((file) => {
-				fs.unlink(join(snapshotsLocation, file), (err) => {
+				fs.unlink(join(snapshotsLocation, file), err => {
 					if (err) return reject(err)
-					counter++
-					if (counter >= files.length) {
-						return resolve()
-					}
 				})
 			})
+			resolve()
 		})
 	})
 }
