@@ -6,6 +6,7 @@ const apiRoutes = require('./server/apiRoutes.js')
 const port = process.env.PORT || 8000
 const functions = require('./server/functions.js')
 
+app.set('view engine', 'ejs')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(join(__dirname, 'public')))
@@ -22,6 +23,11 @@ app.use('*', (req, res, next) => {
 })
 
 app.use('/api', apiRoutes)
+app.get('/', (req, res) => {
+	res.render(join(__dirname, 'server/views/index'), {
+		snapshots: ['example.png'],
+	})
+})
 
 app.listen(port, '0.0.0.0', async () => {
 	console.log(`> Server started on localhost:${port}`)

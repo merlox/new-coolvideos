@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The best videos</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="juicyads-site-verification" content="58b0c36857469ae9db7449d746a34ebf"> -->
+
+	<!--Ga-->
+	<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-63823677-1', 'auto');
+        ga('send', 'pageview');
+	</script>
+    <!--GA end-->
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<h1 id="title">The Top Ten Web</h1>
+	<div id="main-body">
+			<div id="errors"></div>
+			<!-- <div class="contenedor-ads">
+				<script async src="//adserver.juicyads.com/js/jads.js"></script>
+				<ins id="555365" data-width="300" data-height="262"></ins>
+				<script>(adsbyjuicy = 
+				window.adsbyjuicy || []).push({'adzone':555365});</script>
+				<script async src="//adserver.juicyads.com/js/jads.js"></script>
+				<ins id="555364" data-width="300" data-height="262"></ins>
+				<script>(adsbyjuicy = 
+				window.adsbyjuicy || []).push({'adzone':555365});</script>
+			</div> -->
+			<video id="video-player" width="700px" controls>
+				<source id="video-source" src="" type="video/mp4">;
+			</video>
+		</div>
+		<ul id="snapshots">
+            <% snapshots.forEach(snapshot => { %>
+                <li>
+                    <img src="<%= snapshot %>" alt="<%= snapshot %>">
+                </li>
+            <% }); %>
+		</ul>
+	</div>
+</body>
+</html>
