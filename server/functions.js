@@ -1,6 +1,7 @@
-const fs = require('fs')
 const cp = require('child_process')
 const { join } = require('path')
+const { promisifyAll } = require('bluebird')
+const fs = promisifyAll(require('fs'))
 const snapshotsLocation = join(__dirname, '../public/snapshots')
 const videosLocation = join(__dirname, '../public/videos')
 const videoNamesLocation = join(__dirname, 'videonames.txt')
@@ -77,24 +78,29 @@ function generateSnapshot(videoName) {
 			`ffmpeg -y -ss 00:01:35 -i "${videoPathAndName}" -vframes 1 "${snapshotPathAndName}"`,
 			(err, stdout, stderr) => {
 				if (err) return reject(err)
-				resolve(stdout)
+				resolve(snapshotName)
 			}
 		)
 	})
 }
 
 // To generate the snapshots only
+// Returns the snapshots generated
 function generateAllSnapshots() {
 	console.log('generateAllSnapshots')
+	let snapshots = []
 	return new Promise((resolve, reject) => {
 		fs.readdir(videosLocation, (err, videos) => {
 			if (err) return reject(err)
-			videos.map(async video => {
+			videos.map(async (video, index) => {
 				try {
-					await generateSnapshot(video)
-					return resolve()
+					const snapshot = await generateSnapshot(video)
+					snapshots.push(snapshot)
 				} catch (e) {
 					return reject(e)
+				}
+				if (index + 1 >= videos.length) {
+					return resolve(snapshots)
 				}
 			})
 		})
@@ -152,7 +158,7 @@ function generateAllOnlineSnapshots() {
 }
 // Para copiar un video y retornar nada
 async function getVideo(videoName) {
-	console.log('GetVideo')
+	console.log('getVideo')
 	const videoPathAndName = join(videosLocation, videoName)
 	try {
 		return await copyFile(videoPathAndName, videosLocation, videoName)
@@ -161,12 +167,40 @@ async function getVideo(videoName) {
 	}
 }
 
+function generateInitialFolders() {
+	console.log('generateInitialFolders')
+	return new Promise(async (resolve, reject) => {
+		try {
+			await fs.statAsync(snapshotsLocation)
+		} catch (notFoundError) {
+			try {
+				await fs.mkdirAsync(snapshotsLocation)
+			} catch (e) {
+				return reject(e)
+			}
+		}
+
+		try {
+			await fs.statAsync(videosLocation)
+		} catch (notFoundError) {
+			try {
+				await fs.mkdirAsync(videosLocation)
+			} catch (e) {
+				return reject(e)
+			}
+		}
+
+		resolve()
+	})
+}
+
 module.exports = {
-	copyFile: copyFile,
-	getAllSnapshots: getAllSnapshots,
-	generateAllOnlineSnapshots: generateAllOnlineSnapshots,
-	getOnlineSnapshot: getOnlineSnapshot,
-	deleteExistingSnapshots: deleteExistingSnapshots,
-	generateAllSnapshots: generateAllSnapshots,
-	getVideo: getVideo,
+	copyFile,
+	getAllSnapshots,
+	generateAllOnlineSnapshots,
+	getOnlineSnapshot,
+	deleteExistingSnapshots,
+	generateAllSnapshots,
+	getVideo,
+	generateInitialFolders,
 }

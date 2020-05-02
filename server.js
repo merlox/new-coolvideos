@@ -4,7 +4,9 @@ const { join } = require('path')
 const app = express()
 const apiRoutes = require('./server/apiRoutes.js')
 const port = process.env.PORT || 8000
+const Storage = require('node-storage')
 const functions = require('./server/functions.js')
+const store = new Storage(join(__dirname, 'storage'))
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.json())
@@ -25,12 +27,20 @@ app.use('*', (req, res, next) => {
 app.use('/api', apiRoutes)
 app.get('/', (req, res) => {
 	res.render(join(__dirname, 'server/views/index'), {
-		snapshots: ['example.png'],
+		snapshots: store.get('snapshots'),
 	})
 })
 
 app.listen(port, '0.0.0.0', async () => {
 	console.log(`> Server started on localhost:${port}`)
+
+	try {
+		await functions.generateInitialFolders()
+	} catch (e) {
+		console.log('Error generating initial folders:', e)
+		process.exit(1)
+	}
+
 	try {
 		await functions.deleteExistingSnapshots()
 	} catch (e) {
@@ -39,7 +49,8 @@ app.listen(port, '0.0.0.0', async () => {
 	}
 
 	try {
-		await functions.generateAllSnapshots()
+		const snapshots = await functions.generateAllSnapshots()
+		store.put('snapshots', snapshots)
 	} catch (e) {
 		console.log('Error generating snapshots:', e)
 		process.exit(1)
