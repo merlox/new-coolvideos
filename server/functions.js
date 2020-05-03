@@ -4,6 +4,7 @@ const { promisifyAll } = require('bluebird')
 const fs = promisifyAll(require('fs'))
 const snapshotsLocation = join(__dirname, '../public/snapshots')
 const videosLocation = join(__dirname, '../public/videos')
+const picturesLocation = join(__dirname, '../public/pictures')
 
 // Generate snapshot image
 function generateSnapshot(videoName) {
@@ -45,6 +46,17 @@ function generateAllSnapshots() {
 	})
 }
 
+// Reads the pictures folder and returns an array with their names
+async function getPictures() {
+	console.log('getPictures')
+	try {
+		const pictures = await fs.readdirAsync(picturesLocation)
+		return pictures
+	} catch (notFoundError) {
+		throw notFoundError
+	}
+}
+
 // To delete existing snaptshots
 function deleteExistingSnapshots() {
 	console.log('deleteExistingSnapshots')
@@ -55,7 +67,7 @@ function deleteExistingSnapshots() {
 				return resolve('No files found in snapshots')
 			}
 			files.map((file) => {
-				fs.unlink(join(snapshotsLocation, file), err => {
+				fs.unlink(join(snapshotsLocation, file), (err) => {
 					if (err) return reject(err)
 				})
 			})
@@ -87,6 +99,16 @@ function generateInitialFolders() {
 			}
 		}
 
+		try {
+			await fs.statAsync(picturesLocation)
+		} catch (notFoundError) {
+			try {
+				await fs.mkdirAsync(picturesLocation)
+			} catch (e) {
+				return reject(e)
+			}
+		}
+
 		resolve()
 	})
 }
@@ -95,4 +117,5 @@ module.exports = {
 	deleteExistingSnapshots,
 	generateAllSnapshots,
 	generateInitialFolders,
+	getPictures,
 }

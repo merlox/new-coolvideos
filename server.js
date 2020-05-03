@@ -29,16 +29,31 @@ app.get('/', (req, res) => {
 	})
 })
 
+app.get('/pictures', (req, res) => {
+	res.render(join(__dirname, 'server/views/pictures'), {
+		pictures: store.get('pictures')
+	})
+})
+
 app.listen(port, '0.0.0.0', async () => {
 	console.log(`> Server started on localhost:${port}`)
 
 	// Reset snapshots
 	store.put('snapshots', [])
+	store.put('pictures', [])
 
 	try {
 		await functions.generateInitialFolders()
 	} catch (e) {
 		console.log('Error generating initial folders:', e)
+		process.exit(1)
+	}
+
+	try {
+		const pictures = await functions.getPictures()
+		store.put('pictures', pictures)
+	} catch (e) {
+		console.log('Error getting pictures:', e)
 		process.exit(1)
 	}
 

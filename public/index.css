@@ -32,6 +32,11 @@ img {
 	font-family: verdana;
 }
 
+#title a {
+	text-decoration: none;
+	color: black;
+}
+
 .contenedor-ads {
 	width: 310px;
 }
@@ -53,7 +58,7 @@ img {
 	width: 100%;
 }
 
-#snapshots {
+#snapshots, #pictures {
 	list-style-type: none;
 	display: grid;
 	grid-auto-flow: row;
@@ -63,7 +68,11 @@ img {
 	grid-gap: 10px;
 }
 
-.snapshot {
+#pictures {
+	grid-template-columns: 1fr 1fr;
+}
+
+.snapshot, .picture {
 	width: 100%;
 }
 

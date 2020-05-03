@@ -4,7 +4,7 @@ addListeners()
 
 //Funcion para crear los listeners de cada imagen
 function addListeners() {
-	if (document.querySelector('img')) {
+	if (document.querySelector('img') && window.location.pathname === '/') {
 		document.querySelectorAll('img').forEach((image) => {
 			image.addEventListener('click', (e) => {
 				let videoName = e.target.getAttribute('alt').replace('.jpg', '.mp4')

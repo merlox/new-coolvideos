@@ -1,75 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>The best videos</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="juicyads-site-verification" content="58b0c36857469ae9db7449d746a34ebf">
+<%- include('header') %>
 
+<div id="main-body">
+	<video id="video-player" controls controlsList="nodownload">
+		<source id="video-source" src="" type="video/mp4">;
+	</video>
+	<ul id="snapshots">
+		<% snapshots.forEach(snapshot => { %>
+			<li>
+				<img 
+					src="snapshots/<%= snapshot %>"
+					alt="<%= snapshot %>"
+					title="<%= snapshot %>"
+					class="snapshot"
+				/>
+			</li>
+		<% }); %>
+	</ul>
+</div>
 
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147992522-2"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-147992522-2');
-	</script>
-</head>
-<body>
-	<header>
-		<h1 id="title">HEATOON</h1>
-		<div class="links">
-			<a href="/">Videos</a>
-			<a href="/pictures">Pictures</a>
-			<a 
-				href="https://en.chaturbate.com/in/?track=default&tour=bfpW&campaign=AnvA2" 
-				target="_blank"
-				class="button-like"
-			>
-				Chat With Girls
-			</a>
-		</div>
-	</header>
-	<div id="main-body">
-			<div id="errors"></div>
-			<!-- <div class="contenedor-ads">
-				<script async src="//adserver.juicyads.com/js/jads.js"></script>
-				<ins id="555365" data-width="300" data-height="262"></ins>
-				<script>(adsbyjuicy = 
-				window.adsbyjuicy || []).push({'adzone':555365});</script>
-				<script async src="//adserver.juicyads.com/js/jads.js"></script>
-				<ins id="555364" data-width="300" data-height="262"></ins>
-				<script>(adsbyjuicy = 
-				window.adsbyjuicy || []).push({'adzone':555365});</script>
-			</div> -->
-			<video id="video-player" controls controlsList="nodownload">
-				<source id="video-source" src="" type="video/mp4">;
-			</video>
-		</div>
-		<ul id="snapshots">
-            <% snapshots.forEach((snapshot, i) => { %>
-                <li>
-					<img 
-						src="snapshots/<%= snapshot %>"
-						alt="<%= snapshot %>"
-						title="<%= snapshot %>"
-						class="snapshot"
-					/>
-                </li>
-            <% }); %>
-		</ul>
-	</div>
-
-	<script type="text/javascript" src="index.js"></script>
-
-	<!-- JuicyAds v3.2P Start -->
-	<script type="text/javascript">
-	var juicy_tags = ['a', 'img'];
-	</script>
-	<script type="text/javascript" src="https://js.juicyads.com/jp.php?c=b4d4z2x2u256r2w2r28463d4&u=http%3A%2F%2Fwww.juicyads.rocks"></script>
-	<!-- JuicyAds v3.2P End --></body>
-</html>
+<%- include('footer') %>

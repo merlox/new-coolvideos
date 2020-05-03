@@ -1,0 +1,18 @@
+<%- include('header') %>
+
+<div id="main-body">
+    <ul id="pictures">
+        <% pictures.forEach(picture => { %>
+            <li>
+                <img 
+                    src="/pictures/<%= picture %>"
+                    alt="<%= picture %>"
+                    title="<%= picture %>"
+                    class="picture"
+                />
+            </li>
+        <% }) %>
+    </ul>
+</div>
+
+<%- include('footer') %>
