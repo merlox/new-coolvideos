@@ -32,6 +32,9 @@ app.get('/', (req, res) => {
 app.listen(port, '0.0.0.0', async () => {
 	console.log(`> Server started on localhost:${port}`)
 
+	// Reset snapshots
+	store.put('snapshots', [])
+
 	try {
 		await functions.generateInitialFolders()
 	} catch (e) {

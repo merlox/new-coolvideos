@@ -67,7 +67,13 @@ img {
 	width: 100%;
 }
 
-.button-like {
+.links a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: #343434;
+}
+
+a.button-like {
 	padding: 20px;
 	background-color: #ef8003;
 	color: white;
@@ -77,11 +83,11 @@ img {
 	box-shadow: 0 5px 9px -5px #7c7c7c;
 }
 
-.button-like:hover {
+.button-like:hover, .links a:hover {
 	opacity: 0.7;
 }
 
-.button-like:active {
+.button-like:active, .links a:active {
 	opacity: 0.9;
 }
 
@@ -94,5 +100,16 @@ img {
 	}
 	#main-body {
 		margin: 0 0;
+	}
+}
+
+@media (max-width: 550px) {
+	header {
+		flex-direction: column;
+	}
+
+	.links {
+		margin-top: 20px;
+		font-size: 10pt;
 	}
 }
