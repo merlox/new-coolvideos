@@ -1,27 +1,47 @@
+body {
+	font-family: sans-serif;
+	max-width: 1000px;
+	margin: auto;
+	padding: 0 20px;
+}
+
+header {
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+
 iframe {
 	text-align: center;
 	margin: 0 auto;
 	display: block;
 }
+
 img {
 	cursor: pointer;
 }
+
 #main-body {
 	background-color: whitesmoke;
 	margin: 0 50px;
 }
+
 #title {
 	text-align: center;
 	font-family: verdana;
 }
+
 .contenedor-ads {
 	width: 310px;
 }
+
 #contenedor-video-ads {
 	display: none;
 	justify-content: center;
 	flex-direction: row;
 }
+
 #snapshots {
 	text-align: center;
 }
@@ -30,7 +50,7 @@ img {
 	display: none;
 	margin: 0 auto;
 	height: 100%;
-	width: 900px;
+	width: 100%;
 }
 
 #snapshots {
@@ -39,13 +59,30 @@ img {
 	grid-auto-flow: row;
 	padding-left: 0;
 	grid-template-columns: 1fr 1fr 1fr;
-	max-width: 1000px;
 	margin: 50px auto;
 	grid-gap: 10px;
 }
 
 .snapshot {
 	width: 100%;
+}
+
+.button-like {
+	padding: 20px;
+	background-color: #ef8003;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 10px;
+	box-shadow: 0 5px 9px -5px #7c7c7c;
+}
+
+.button-like:hover {
+	opacity: 0.7;
+}
+
+.button-like:active {
+	opacity: 0.9;
 }
 
 @media (max-width: 1050px) {
